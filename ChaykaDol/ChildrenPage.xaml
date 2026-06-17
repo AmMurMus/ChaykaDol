@@ -1,0 +1,26 @@
+<Page x:Class="ChaykaDol.ChildrenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="txtSearch" Width="150" ToolTip="Поиск по ФИО" TextChanged="txtSearch_TextChanged"/>
+            <Button Content="Добавить" Click="btnAdd_Click" Margin="10,0"/>
+            <Button Content="Удалить" Click="btnDelete_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgChildren" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}" Width="*"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding ParentPhone}" Width="120"/>
+                <DataGridTextColumn Header="Комната" Binding="{Binding RoomNumber}" Width="80"/>
+                <DataGridTextColumn Header="Отряд" Binding="{Binding Group.Name}" Width="120"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

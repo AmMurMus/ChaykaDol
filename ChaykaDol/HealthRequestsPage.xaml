@@ -1,0 +1,5 @@
+<Page x:Class="ChaykaDol.HealthRequestsPage">
+    <Grid>
+        <TextBlock Text="Страница заявок" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Page>

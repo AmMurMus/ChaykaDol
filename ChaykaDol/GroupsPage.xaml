@@ -1,0 +1,5 @@
+<Page x:Class="ChaykaDol.GroupsPage">
+    <Grid>
+        <TextBlock Text="Страница отрядов" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Page>
